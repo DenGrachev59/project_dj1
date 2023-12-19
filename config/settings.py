@@ -77,8 +77,10 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'project_django_1',
+        'USER': 'postgres',
+        'PASSWORD': '380210',
     }
 }
 
@@ -118,6 +120,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
+
+# STATICFILES_DIRS = [
+#     # Здесь вы можете добавить пути к вашим статическим файлам,
+#     # если они располагаются вне приложений
+#     BASE_DIR / 'static'
+# ]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
