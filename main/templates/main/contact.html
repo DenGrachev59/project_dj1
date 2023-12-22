@@ -1,0 +1,52 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+
+
+        <div class="col">
+          <div class="card shadow-sm">
+
+
+            <div class="card-body">
+              <h2>Наш адрес:</h2>
+              <p class="card-text">
+                    Офис МСК<br>
+                    Офис СПБ<br>
+
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+
+
+            <div class="card-body">
+              <h2>  Напишите нам  </h2>
+                    <form method="post">
+                        {% csrf_token %}
+                        <input class="form-control mb-2" name="name"/>
+                        <input class="form-control mb-2" name="email"/>
+                        <textarea class="form-control mb-2" name="message"></textarea>
+                        <button type="submit" class="btn btn-primary form-control mb-2">Отправить</button>
+
+
+                    </form>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+{% endblock %}
