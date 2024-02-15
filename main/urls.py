@@ -1,11 +1,20 @@
 from django.urls import path
 
 from main.apps import MainConfig
-from main.views import index, contact
+from main.views import contact, StudentListView, StudentDetailView, StudentCreateView, StudentUpdateView, \
+    StudentDeleteView, toggel_activity
 
 app_name = MainConfig.name
 
 urlpatterns = [
-    path('', index, name='index'),
+    path('', StudentListView.as_view(), name='student_list'),
+    # path('', index, name='index'),
     path('contact/', contact, name='contact'),
+    path('view/<int:pk>/', StudentDetailView.as_view(), name='view_student'),
+    path('create/', StudentCreateView.as_view(), name='create_student'),
+    path('update/<int:pk>', StudentUpdateView.as_view(), name='update_student'),
+    path('delete/<int:pk>', StudentDeleteView.as_view(), name='delete_student'),
+    path('activity/<int:pk>', toggel_activity, name='activity_student'),
+
+
 ]

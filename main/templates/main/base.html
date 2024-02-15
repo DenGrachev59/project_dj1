@@ -44,8 +44,9 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-8 col-md-7 py-4">
-          <h4 class="text-white">{{ title }}</h4>
-          <p class="text-muted">{{ description }}</p>
+          <h4 class="text-muted">{{ title }}</h4>
+          <h1  class="text-white"> {{ description| title }}</h1>
+
         </div>
         {% include 'main/includes/inc_main_menu.html' %}
       </div>
@@ -69,9 +70,8 @@
   <section class="py-5 text-center container">
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto">
-        <h1 class="fw-light">{{ title }} </h1>
-        <p class="lead text-muted">{{ description }}</p>
-        <p>
+        <h3 class="fw-light">{{ title }} </h3>
+        <h1 class="text-muted">{{ description| title }}</h1>
 <!--          <a href="#" class="btn btn-primary my-2">Main call to action</a>-->
 <!--          <a href="#" class="btn btn-secondary my-2">Secondary action</a>-->
         </p>
@@ -99,8 +99,9 @@
       <a href="#">Back to top</a>
     </p>
     <p>
-      <li><a href="{% url 'main:index' %}" class="text-blue">Главная</a></li>
-      <li><a href="{% url 'main:contact' %}" class="text-blue">Контакты</a></li>
+       {% include 'main/includes/inc_main_menu.html' %}
+<!--      <li><a href="{% url 'main:student_list' %}" class="text-blue">Главная</a></li>-->
+<!--      <li><a href="{% url 'main:contact' %}" class="text-blue">Контакты</a></li>-->
     </p>
     <p class="mb-1"> Улыбайтесь! Людям это нравится! &copy; Студия DG {% now 'Y' %} год. </p>
     <p class="mb-0">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a href="/docs/5.0/getting-started/introduction/">getting started guide</a>.</p>

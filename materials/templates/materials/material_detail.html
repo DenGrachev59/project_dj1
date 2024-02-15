@@ -1,0 +1,64 @@
+{% extends 'main/base.html'%}
+
+
+
+{% block content%}
+
+    <div class="col-12">
+        <div class="row">
+            <div class="col-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">
+                            Материал {{ object.title }}  /слаг ({{  object.slug}})/
+                        </h3>
+                    </div>
+                    <div class="card-body">
+                        <p>
+                            {{ object.body }}
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        Просмотры: {{ object.views_count }}
+                    </div>
+
+                </div>
+                <p>
+                <div class="col-12">
+                    <a class="btn btn-outline-primary" href="{% url 'materials:list' %}">назад к материалам</a>
+                </div>
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+<!--<div class="col">-->
+<!--              <div class="card shadow-sm">-->
+<!--&lt;!&ndash;                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>&ndash;&gt;-->
+<!--                <div class="card-body">-->
+<!--                  <p class="card-text">-->
+<!--                       <p class="card-text">Имя:   {{ object.first_name }} </p>-->
+<!--                    <p class="card-text">Фамилия:  {{ object.last_name }}</p>-->
+<!--                    <p class="card-text"> Статус учится или нет:  {{ object.is_active }}</p>-->
+<!--                  </p>-->
+<!--                  <div class="d-flex justify-content-between align-items-center">-->
+<!--                    <div class="btn-group">-->
+<!--                    <a href="{% url 'main:index' %}" type="button" class="btn btn-sm btn-outline-secondary">Вернуться на главную</a>-->
+<!--&lt;!&ndash;                           <button type="button" class="btn btn-sm btn-outline-secondary">View</button>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>&ndash;&gt;-->
+<!--                    </div>-->
+<!--&lt;!&ndash;                    <small class="text-body-secondary">9 mins</small>&ndash;&gt;-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+
+
+
+
+
+
+
+{% endblock %}
